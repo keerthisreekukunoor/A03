@@ -1,0 +1,27 @@
+.contact-body{
+	padding-top: 20px;
+	padding-left: 100px;
+	background-image : url(pics.jpg);
+	background-size: 100%;
+}
+body{
+	
+	background-image : url(pics.jpg);
+	background-size: 100%;
+}
+.section-header{
+	background-color:#b3ffff;
+    font-style:italic;
+	transition: ease-in-out, width .35s ease-in-out;
+	border: 2px solid yellow;
+	text-align: center;
+	color: #ff0000;
+}
+footer{
+	background-color:#bbff99;
+	border: 2px solid yellow;
+	transition: ease-in-out, width .35s ease-in-out;
+	font-size:100%;
+	font-style: oblique;
+	text-align: center;
+}
