@@ -1,0 +1,62 @@
+<% include header %>
+<link rel="stylesheet" href="css/contact.css" type="text/css"> 
+<body>
+    
+    <section class="contact-body">
+        <!-- A BootStrap container is used to adjust the layout of the contents based on screen size. .container uses pre-built screen sizes, while .container-fluid adjusts continously.-->
+        <div class="container-fluid">
+            <!-- BootStrap grid system using one row that could have several columns (when the screen size is large enough) -->
+            <div class="row">
+                <div class="col-sm-12">
+
+                </div>
+                <!-- /column -->
+            </div>
+            <!-- /row -->
+
+        </div>
+        <!-- /container -->
+        <a href="https://github.com/keerthisreekukunoor"><img width="50" height="50" src="images/git.png" alt="github"> </a>
+        <a href="https://www.linkedin.com/in/keerthi-reddy-2a3078118/"><img width="50" height="50" src="images/linked.png"
+                alt="linkedin"> </a>
+        <a href="https://bitbucket.org/keerthi_sree/"><img width="50" height="50" src="images/bit.jpg" alt="bitbucket"> </a>
+
+        <form>
+            <fieldset>
+                <legend>Personal information:</legend>
+            </fieldset>
+            First name:<br>
+            <input type="text" name="firstname"required><br>
+            Last name:<br>
+            <input type="text" name="lastname"required><br>
+            Gender:<br>
+            <input type="radio" name="gender" value="male"> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+            <input type="radio" name="gender" value="other"> Other<br>
+            Text Here:<br>
+            <textarea name="message" rows="5" cols="30">
+                    
+                        </textarea><br>
+                        <div class="from-group-row">
+                            <label for="inputEmail" class="col-sm-3 col-form-lable">
+                                <p id="email"><strong>Email:</strong></p>
+                            </label>
+                            <div class="col-sm-3">
+                                <input type="email" class="form-contrl" id="inputEmail" placeholder="example@gmail.com"pattern=".+@gmail.com"required>
+                                </div>
+                                </div>
+                                <div class="form-group-row">
+                                <label for="inputphone" class="col-sm-3 col-form-lable">
+                                    <p id="phone"><strong>Phoneno:</strong></p>
+                                  </label>
+                                <div class="col-sm-3">
+                                <input type="phone" class="form-control" id="inputPhone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required>
+                            </div>
+                        </div>
+                       
+            
+            <button type="button" onclick="alert('this is new form')">Click Me!</button>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <% include footer %>
