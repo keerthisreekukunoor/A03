@@ -68,7 +68,9 @@ app.get(function (req, res) {
    })
    
    // Listen for an application request on designated port
-   app.listen(port, function () {
-    console.log('Web app started and listening on http://localhost:' + port)
+   //app.listen(port, function () {
+    //console.log('Web app started and listening on http://localhost:' + port)
+    http.listen(process.env.PORT || 8081, function () {
+        console.log('Guestbook app listening on http://127.0.0.1:8081/')
    })
   
