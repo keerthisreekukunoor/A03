@@ -88,9 +88,9 @@ app.get("/", function (req, res) {
       
       console.log('\nCONTACT FORM DATA: '+name+' '+email+' '+comment+'\n');
       if(!error)
-      res.alert("message sent")
+      res.send("message sent")
       else
-      res.alert("there is an error ,message not sent")
+      res.send("there is an error ,message not sent")
     });
 
 
