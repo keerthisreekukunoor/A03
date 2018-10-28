@@ -1,6 +1,6 @@
-var field1 = document.querySelector('#field1');
-var field2 = document.querySelector('#field2');
-var result = document.querySelector('#result');
+var numField1 = document.querySelector('#field1');
+var numField2 = document.querySelector('#field2');
+var resultField = document.querySelector('#result');
 var form = document.querySelector('#Percentage').addEventListener('submit', function (event) {
   if (!field1.value || !field2.value) 
   {
