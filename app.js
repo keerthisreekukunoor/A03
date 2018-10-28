@@ -61,6 +61,24 @@ app.get("/", function (req, res) {
    })
 
    // 5 http POST /contact
+   app.post("/contact",function(req,res){
+       const name=req.body.inputname;
+       const email=req.body.inputemail;
+       const company=req.body.inputcompany;
+       const comment=req.body.inputcomment;
+       const isError=true;
+
+       const mailOptions={
+           from: '"Denise Case"<denisecase@gmail.com>',
+           to: 'dcase@nwmissouri.edu,denisecase@gmail.com',
+           subject:'Message from Website Contact page',
+           text:comment,
+           err:isError
+    
+       }
+       console.log('\nCONTACT FORM DATA: '+name+' '+email+' '+comment+'\n');
+    })
+
 
  // 6 this will execute for all unknown URIs not specifically handled
 app.get(function (req, res) {
