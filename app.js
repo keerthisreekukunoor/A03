@@ -5,7 +5,7 @@ const bodyParser = require("body-parser") // simplifies access to request body
 const fs = require('fs')  // NEW - this is required
 const app = express()  // make express app
 const http = require('http').Server(app)  // inject app into the server
-const PORT = 8081
+
 // ADD THESE COMMENTS AND IMPLEMENTATION HERE 
 // 1 set up the view engine
 // 2 manage our entries
@@ -88,7 +88,7 @@ app.get(function (req, res) {
    // Listen for an application request on designated port
    //app.listen(port, function () {
     //console.log('Web app started and listening on http://localhost:' + port)
-    http.listen(process.env.PORT, function () {
-        console.log('Guestbook app listening on http://127.0.0.1:8081/'+PORT)
+    http.listen(process.env.PORT||8081, function () {
+        console.log('Guestbook app listening on http://127.0.0.1:8081/')
    })
   
