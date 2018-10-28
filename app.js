@@ -62,22 +62,45 @@ app.get("/", function (req, res) {
 
    // 5 http POST /contact
    app.post("/contact",function(req,res){
-       const name=req.body.inputname;
-       const email=req.body.inputemail;
-       const company=req.body.inputcompany;
-       const comment=req.body.inputcomment;
-       const isError=true;
+      
 
-       const mailOptions={
-           from: '"Denise Case"<denisecase@gmail.com>',
-           to: 'dcase@nwmissouri.edu,denisecase@gmail.com',
-           subject:'Message from Website Contact page',
-           text:comment,
-           err:isError
+       var api_key = '3cb530598bafbfbdc1007bb03dc98040-4836d8f5-dd80b7e8';
+var domain = 'sandboxd9fa1a19e26346e1be8c40737626bba9.mailgun.org';
+var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
+const fname=req.body.firstname;
+const lname=req.body.lastname;
+const gender=req.body.gender;
+const gender1=req.body.gender;
+const gender2=req.body.gender;
+const email=req.body.email;
+const comment=req.body.message;
+const mble=req.body.phone;
+
+const comment=req.body.inputcomment;
+const isError=true;
+
+ 
+var data = {
+  from: 'postmaster@sandboxd9fa1a19e26346e1be8c40737626bba9.mailgun.org',
+
+  to: 'keerthisree9595@gmail.com',
+  subject: fname+"has just sent you a message",
+  html: 'Testing some Mailgun awesomeness!'
+};
+ 
+mailgun.messages().send(data, function (error, body) {
+  console.log(body);
+
+
     
-       }
+       
        console.log('\nCONTACT FORM DATA: '+name+' '+email+' '+comment+'\n');
-    })
+       if(!error)
+       alert("message sent")
+       else
+       alert("message not sent due to error")
+    });
+})
 
 
  // 6 this will execute for all unknown URIs not specifically handled
