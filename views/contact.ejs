@@ -21,7 +21,7 @@
                 alt="linkedin"> </a>
         <a href="https://bitbucket.org/keerthi_sree/"><img width="50" height="50" src="images/bit.jpg" alt="bitbucket"> </a>
 
-        <form>
+        <form method="POST" role="form">
             <fieldset>
                 <legend>Personal information:</legend>
             </fieldset>
@@ -42,7 +42,7 @@
                                 <p id="email"><strong>Email:</strong></p>
                             </label>
                             <div class="col-sm-3">
-                                <input type="email" class="form-contrl" id="inputEmail" placeholder="example@gmail.com"pattern=".+@gmail.com"required>
+                                <input type="email" name="email" class="form-contrl" id="inputEmail" placeholder="example@gmail.com"pattern=".+@gmail.com"required>
                                 </div>
                                 </div>
                                 <div class="form-group-row">
@@ -50,7 +50,7 @@
                                     <p id="phone"><strong>Phoneno:</strong></p>
                                   </label>
                                 <div class="col-sm-3">
-                                <input type="phone" class="form-control" id="inputPhone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required>
+                                <input type="phone" name="phone" class="form-control" id="inputPhone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required>
                             </div>
                         </div>
                        
