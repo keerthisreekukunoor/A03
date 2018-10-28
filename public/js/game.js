@@ -1,7 +1,10 @@
 var numField1 = document.querySelector('#field1');
 var numField2 = document.querySelector('#field2');
 var resultField = document.querySelector('#result');
-var form = document.querySelector('#Percentage').addEventListener('submit', function (event) {
+var form = document.querySelector('#Percentage').addEventListener('submit', calculatePerentage());
+
+function calculatePerentage()
+ {
   if (!field1.value || !field2.value) 
   {
     alert("Please enter values in the fields");
@@ -16,4 +19,5 @@ var form = document.querySelector('#Percentage').addEventListener('submit', func
     resultField.innerText = "Answer: " + percent + "%";
     event.preventDefault();
   }
-});
+  return percent;
+}
