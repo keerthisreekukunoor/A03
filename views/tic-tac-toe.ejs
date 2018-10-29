@@ -2,19 +2,18 @@
 <link rel="stylesheet" href="css/game.css" type="text/css">
 <link rel="stylesheet" href="/css/keerthi.css" type="text/css">
 <body>
-	<section class="container mt-6">
-		<h1>Percentage Calculator</h1>
-		<h3>X is what percent of Y</h3>
-		
-		<form id="Percentage">
-		<div class="form-inline mb-2">
-		  <input type="text" class="form-control mr-sm-2" id="field1"> is what % of
-		  <input type="text" class="form-control mx-sm-2" id="field2">?
-		</div>
-	
-		<input type="submit" class="btn btn-success" value="Calculate" onsubmit = "calculatePercentage(document.getElementById('field1').value, document.getElementById('field2').value)">
-		</form>
-		<h3  id="result" class="mt-4 alert alert-primary" role="alert"></h3>
-	  </section>
+	<section class="container mt-4">
+    <h1>Percentage Calculators</h1>
+    <p class="lead">X is what % of Y?</p>
+    <form id="xIsWhatPercentOfY">
+    <div class="form-inline mb-2">
+      <input type="text" class="form-control mr-sm-2" id="numField1"> is what % of
+      <input type="text" class="form-control mx-sm-2" id="numField2">?
+    </div>
+
+    <input type="submit" class="btn btn-success" value="Calculate">
+    </form>
+    <h3  id="resultField" class="mt-4 alert alert-primary" role="alert"></h3>
+  </section>
  
         <% include footer %>
